@@ -25,7 +25,7 @@ pipeline {
             }
             steps {
                 sh './jenkins/scripts/deliver-for-development.sh'
-                input message 'Finish using web app? (Click Proceed to continue)'
+                input message: 'Finish using web app? (Click Proceed to continue)'
                 sh './jenkins/scripts/kill.sh'
             }
         }
@@ -35,7 +35,7 @@ pipeline {
             }
             steps {
                 sh './jenkins/scripts/deliver-for-production.sh'
-                input message 'Finish using web app? (Click Proceed to continue)'
+                input message: 'Finish using web app? (Click Proceed to continue)'
                 sh './jenkins/scripts/kill.sh'
             }
         }
